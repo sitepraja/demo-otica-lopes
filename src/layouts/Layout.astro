@@ -1,0 +1,28 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'none'; object-src 'none';"
+    />
+    <meta
+      name="description"
+      content="Ótica Lopes — Sua ótica em casa! Há 10 anos cuidando da sua visão com atendimento em domicílio, exame de vista grátis e loja física no Centro de São Gonçalo/RJ."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <title>{title}</title>
+  </head>
+  <body class="bg-white text-lopes-grafite antialiased font-sans">
+    <slot />
+  </body>
+</html>

@@ -1,0 +1,77 @@
+---
+import { contatos } from "../data/contatos";
+---
+
+<section id="historia" class="bg-white py-16 md:py-20">
+  <div class="max-w-6xl mx-auto px-5 grid lg:grid-cols-12 gap-10 items-center">
+    <div class="lg:col-span-7">
+      <p class="text-sm font-bold uppercase tracking-wider text-lopes-vermelho">
+        Nossa história
+      </p>
+      <h2
+        class="text-3xl sm:text-4xl font-bold tracking-tight text-lopes-grafite mt-2"
+      >
+        10 anos de história ao seu lado
+      </h2>
+
+      <p class="text-base sm:text-lg text-lopes-aco mt-5 leading-relaxed">
+        São 10 anos de Ótica Lopes construindo uma história de dedicação,
+        confiança e compromisso com nossos clientes. Tudo o que construímos até
+        aqui foi pensando em como atender você ainda melhor — mantendo sempre o
+        nosso grande diferencial: o atendimento em domicílio.
+      </p>
+
+      <blockquote
+        class="mt-6 pl-5 border-l-4 border-lopes-vermelho text-lopes-grafite italic leading-relaxed"
+      >
+        “Nossa gratidão a todos os familiares, amigos e clientes que fazem parte
+        dessa caminhada. Cada parceria, indicação e gesto de confiança foi
+        fundamental para chegarmos até aqui.”
+      </blockquote>
+    </div>
+
+    <div class="lg:col-span-5">
+      <div class="bg-lopes-gelo border border-gray-200 rounded-2xl p-7 sm:p-8">
+        <div class="flex items-center gap-3 text-lopes-vermelho mb-3">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          <span class="font-bold text-sm uppercase tracking-wide">
+            Venha conhecer nosso novo espaço
+          </span>
+        </div>
+
+        <h3 class="text-xl font-bold text-lopes-grafite">Loja Física</h3>
+        <p class="text-lopes-aco mt-2 leading-relaxed">
+          {contatos.endereco.completo}
+        </p>
+
+        <div class="mt-5 pt-5 border-t border-gray-200/80 flex flex-col gap-3">
+          <p class="text-sm text-lopes-aco">
+            Prefere não sair de casa? Nós vamos até você com atendimento
+            personalizado em domicílio.
+          </p>
+          <a
+            href={contatos.endereco.mapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-1.5 text-sm font-semibold text-lopes-vermelho hover:text-lopes-vinho transition-colors"
+          >
+            Ver localização no Google Maps →
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

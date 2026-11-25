@@ -1,0 +1,69 @@
+---
+import { Image } from "astro:assets";
+import logoOticaLopes from "../assets/logo-oticalopes.png";
+import Botao from "./Botao.astro";
+import { contatos } from "../data/contatos";
+---
+
+<section class="bg-white">
+  <div
+    class="max-w-6xl mx-auto px-5 py-14 md:py-20 grid lg:grid-cols-2 gap-12 items-center"
+  >
+    <div>
+      <span
+        class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-lopes-gelo border border-gray-200 text-lopes-vermelho text-sm font-semibold mb-6"
+      >
+        <span class="w-2 h-2 rounded-full bg-lopes-vermelho"></span>
+        10 anos cuidando da sua visão
+      </span>
+
+      <h1
+        class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-lopes-grafite leading-tight"
+      >
+        Sua ótica <span class="text-lopes-vermelho">em casa!</span>
+      </h1>
+
+      <p class="text-lg text-lopes-aco mt-5 leading-relaxed max-w-xl">
+        Escolha seus óculos com conforto, praticidade e atendimento
+        personalizado, sem sair de casa — ou venha conhecer nosso novo espaço no
+        Centro de São Gonçalo.
+      </p>
+
+      <div class="mt-8 flex flex-col sm:flex-row gap-3">
+        <Botao href={contatos.whatsappPrincipal.url} class="gap-2">
+          Agendar pelo WhatsApp
+        </Botao>
+        <Botao href="#contato" style="outline">
+          Ver contatos e endereço
+        </Botao>
+      </div>
+
+      <div
+        class="mt-8 pt-6 border-t border-gray-100 flex flex-wrap gap-x-6 gap-y-2 text-sm text-lopes-aco"
+      >
+        <span class="font-medium text-lopes-grafite">✓ Exame de vista grátis</span>
+        <span class="font-medium text-lopes-grafite">✓ Atendimento em domicílio</span>
+        <span class="font-medium text-lopes-grafite">✓ Condições especiais</span>
+      </div>
+    </div>
+
+    <div class="flex justify-center">
+      <div
+        class="w-full max-w-md bg-lopes-gelo border border-gray-200 rounded-2xl p-8 sm:p-10 flex flex-col items-center text-center shadow-sm"
+      >
+        <Image
+          src={logoOticaLopes}
+          alt="Ótica Lopes - Sua Ótica em Casa"
+          width={320}
+          height={320}
+          loading="eager"
+          class="w-64 sm:w-72 h-auto object-contain"
+        />
+        <p class="mt-6 text-sm text-lopes-aco font-medium">
+          As armações do momento com estilo, elegância e personalidade para
+          transformar o seu visual.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
